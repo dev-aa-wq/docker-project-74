@@ -8,9 +8,7 @@ compose-dev:
 	docker compose up
 
 ci:
-	docker compose -f docker-compose.yml build app
-	docker compose -f docker-compose.yml run --rm app make setup
-	docker compose -f docker-compose.yml up --abort-on-container-exit --exit-code-from app
+	docker compose -f docker-compose.yml up --build --abort-on-container-exit --exit-code-from app
 
 setup:
 	npm ci || npm install
