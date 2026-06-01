@@ -10,4 +10,6 @@ services:
       - ./app:/app
     command: ["make","test"]
     image: devaa72/docker-project-74
-    platform: linux/amd64
+#    platform: linux/amd64
+
+
