@@ -28,4 +28,5 @@ jobs:
           context: .
           file: Dockerfile.production
           push: true
+          platform: linux/amd64
           tags: devaa72/docker-project-74:latest
