@@ -5,7 +5,7 @@ services:
       - "8080:8080"
     volumes:
       - ./app:/app
-    platform: linux/amd64
+#    platform: linux/amd64
     image: devaa72/docker-project-74
     build:
         context: .
