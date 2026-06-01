@@ -11,5 +11,16 @@ services:
     command: ["make","test"]
     image: devaa72/docker-project-74
 #    platform: linux/amd64
+  db:
+    image: postgres:latest
+    environment:
+        POSTGRES_USER: postgres
+        POSTGRES_PASSWORD: password
+        POSTGRES_DB: postgres
+    healthcheck:
+        test: [ "CMD-SHELL", "pg_isready -U postgres" ]
+        interval: 5s
+        timeout: 5s
+        retries: 5
 
 

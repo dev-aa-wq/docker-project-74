@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    command: ["make", "dev"]
+    command: make dev
     volumes:
       - ./app:/app
 
